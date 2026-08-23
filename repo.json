@@ -447,9 +447,9 @@
       "versions": [
         {
           "version": "Nightly-2026.08.22",
-          "date": "2026-08-22T09:02:37Z",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260822/ARMSX2-nightly-20260822-9111cd617d-iOS-arm64.ipa",
-          "size": 26734522
+          "date": "2026-08-22T14:51:06Z",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260822/ARMSX2-nightly-20260822-1b737e25f0-iOS-arm64.ipa",
+          "size": 26735488
         }
       ],
       "appPermissions": {
