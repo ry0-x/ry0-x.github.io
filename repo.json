@@ -50,9 +50,9 @@
       "versions": [
         {
           "version": "MeloNX",
-          "date": "2026-08-26T01:37:29Z",
+          "date": "2026-08-26T13:18:11Z",
           "downloadURL": "https://github.com/ry0-x/ry0_repo/releases/download/nightly/melonx.ipa",
-          "size": 101311
+          "size": 101429
         }
       ],
       "appPermissions": {
