@@ -92,7 +92,7 @@
     {
       "name": "PPSSPP",
       "bundleIdentifier": "org.ppsspp.ppsspp",
-      "developerName": "Henrik Rydgård",
+      "developerName": "Henrik Rydg\u00e5rd",
       "localizedDescription": "PSP emulator for iOS.",
       "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/PPSPP-icon.png",
       "tintColor": "#224A8B",
@@ -510,39 +510,39 @@
       ]
     },
     {
-      "name": "YTPlus/YTLite Cracked (5.2.2) - v21.33.6",
-      "bundleIdentifier": "com.google.ios.youtube.ytplus.cracked.5.2.2.21.33.6",
+      "name": "YTPlus/YTLite Cracked (5.2.2) - v21.34.3",
+      "bundleIdentifier": "com.google.ios.youtube.ytplus.cracked.5.2.2.21.34.3",
       "developerName": "YouTube",
       "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-      "subtitle": "Cracked by Zarzel (shinewake), updated by BallerMC to 21.33.6",
-      "localizedDescription": "This is the cracked version of YTPlus, without the Patreon DRM. This was cracked by Zarzel (shinewake), and updated to 21.33.6.",
+      "subtitle": "Cracked by Zarzel (shinewake), updated by BallerMC to 21.34.3",
+      "localizedDescription": "This is the cracked version of YTPlus, without the Patreon DRM. This was cracked by Zarzel (shinewake), and updated to 21.34.3.",
       "tintColor": "#848ef9",
       "versions": [
         {
-          "version": "21.33.6",
-          "date": "2026-08-23T00:00:00Z",
-          "localizedDescription": "This uses 21.33.6 version of YouTube.",
-          "downloadURL": "https://repo.ballermc.com/tubevault/YouTube_v21.33.6_YTPlus_v5.2.2_cracked%5Btg%40tubevault%5D.ipa",
-          "size": 142389974
+          "version": "21.34.3",
+          "date": "2026-08-25T00:00:00Z",
+          "localizedDescription": "This uses 21.34.3 version of YouTube.",
+          "downloadURL": "https://repo.ballermc.com/tubevault/YouTube_v21.34.3_YTPlus_v5.2.2_cracked%5Btg%40tubevault%5D.ipa",
+          "size": 143631412
         }
       ],
       "category": "entertainment"
     },
     {
-      "name": "YouTube Music Ultimate Enchanced",
-      "bundleIdentifier": "com.google.ios.youtube.music.ultimate.enhanced",
+      "name": "YouTube Music Ultimate+ (2.4.1)",
+      "bundleIdentifier": "com.google.ios.youtube.music.ultimate.plus",
       "developerName": "YouTube",
       "iconURL": "https://static.vecteezy.com/system/resources/previews/017/395/384/non_2x/youtube-music-icon-free-png.png",
-      "subtitle": "Mod by dayanch96, enhanced version by Moe",
-      "localizedDescription": "This is a modded version of YouTube Music with the following tweaks:\nYTMusicUltimate and Downloading. You can see more information about the mod at: https://github.com/dayanch96/YTMusicUltimate",
+      "subtitle": "Mod by Mark02-2012",
+      "localizedDescription": "This is a modded version of YouTube Music. This comes with the following tweaks:\nReturn-YouTube-Music-Dislikes, YTMABConfig, YouMusicPiP, VolumeBoostYT and Downloading. You can see more information about the mod at: https://github.com/Mark02-2012/YTMUltimatePLUS",
       "tintColor": "#848ef9",
       "versions": [
         {
-          "version": "9.33.6",
-          "date": "2026-08-23T00:00:00Z",
-          "localizedDescription": "This uses 9.33.6 version of YouTube Music.",
-          "downloadURL": "https://repo.ballermc.com/tubevault/YouTubeMusic9.33.6Moe-Ultimate2.4.1Patched.ipa",
-          "size": 103482151
+          "version": "9.34.4",
+          "date": "2026-08-25T00:00:00Z",
+          "localizedDescription": "This uses 9.34.4 version of YouTube Music.",
+          "downloadURL": "https://repo.ballermc.com/tubevault/YTMUltimate%2B_2.4.1_9.34.4.ipa",
+          "size": 104079012
         }
       ],
       "category": "entertainment"
