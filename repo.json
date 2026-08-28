@@ -92,7 +92,7 @@
     {
       "name": "PPSSPP",
       "bundleIdentifier": "org.ppsspp.ppsspp",
-      "developerName": "Henrik Rydgård",
+      "developerName": "Henrik Rydg\u00e5rd",
       "localizedDescription": "PSP emulator for iOS.",
       "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/PPSPP-icon.png",
       "tintColor": "#224A8B",
@@ -510,20 +510,20 @@
       ]
     },
     {
-      "name": "YTPlus/YTLite Cracked (5.2.2) - v21.34.3",
-      "bundleIdentifier": "com.google.ios.youtube.ytplus.cracked.5.2.2.21.34.3",
+      "name": "YTPlus/YTLite Cracked + Bonus Tweaks (5.2.2 - iOSDecrypted)",
+      "bundleIdentifier": "com.google.ios.youtube.ytplus.cracked.bonus.5.2.2.iOSDecrypted",
       "developerName": "YouTube",
       "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-      "subtitle": "Cracked by Zarzel (shinewake), updated by BallerMC to 21.34.3",
-      "localizedDescription": "This is the cracked version of YTPlus, without the Patreon DRM. This was cracked by Zarzel (shinewake), and updated to 21.34.3.",
+      "subtitle": "Cracked by Zarzel (shinewake), Bonus Tweaks added by iOSDecrypted",
+      "localizedDescription": "This is the cracked version of YTPlus, without the Patreon DRM. This was cracked by Zarzel (shinewake).\nThis includes the following tweaks:\nYouPiP, Return YouTube Dislikes, DontEatMyContent, NoYTPremium, YTABConfig, YTUHD, YTVideoErrorAlert, YTVideoOverlay, and Open In YouTube Safari Extension.\n **If you are on iOS 26+, you should use Feather with \"Replace Substrate with Ellekit\" when signing!!**\n This ipa was gotten from https://t.me/iosdecrypted.",
       "tintColor": "#848ef9",
       "versions": [
         {
           "version": "21.34.3",
-          "date": "2026-08-25T00:00:00Z",
+          "date": "2026-08-27T00:00:00Z",
           "localizedDescription": "This uses 21.34.3 version of YouTube.",
-          "downloadURL": "https://repo.ballermc.com/tubevault/YouTube_v21.34.3_YTPlus_v5.2.2_cracked%5Btg%40tubevault%5D.ipa",
-          "size": 143631412
+          "downloadURL": "https://repo.ballermc.com/tubevault/%5BTG%40i_osd%5DYT_21.34.3_YP.ipa",
+          "size": 142900590
         }
       ],
       "category": "entertainment"
