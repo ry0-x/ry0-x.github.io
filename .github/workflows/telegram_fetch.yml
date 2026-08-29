@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       channel_username:
-        description: 'Telegram Channel Username'
+        description: 'Primary Telegram Channel Username'
         required: true
         default: 'm_ipa_real'
       app_name:
@@ -47,24 +47,39 @@ jobs:
           api_id = int(os.environ.get('TG_API_ID'))
           api_hash = os.environ.get('TG_API_HASH')
           session_str = os.environ.get('TG_SESSION')
-          channel = os.environ.get('CHANNEL')
+          primary_channel = os.environ.get('CHANNEL')
           app_name_input = os.environ.get('APP_NAME')
+
+          # قائمة القنوات: يبدأ بالأساسية، وإذا فشل يروح للبديلة
+          CHANNELS = [primary_channel, 'minecraft_ipa_real']
 
           async def main():
               client = TelegramClient(StringSession(session_str), api_id, api_hash)
               await client.connect()
-              print(f"🔍 Searching @{channel} for latest IPA...")
               
-              messages = await client.get_messages(channel, limit=20)
               downloaded_file = None
               original_name = ""
               
-              for msg in messages:
-                  if msg.document and msg.file.name and msg.file.name.lower().endswith('.ipa'):
-                      original_name = msg.file.name
-                      print(f"📥 Found: {original_name}. Downloading...")
-                      downloaded_file = await client.download_media(msg, file=original_name)
-                      break
+              for channel in CHANNELS:
+                  print(f"🔍 Searching @{channel} for latest IPA...")
+                  try:
+                      messages = await client.get_messages(channel, limit=20)
+                      for msg in messages:
+                          if msg.document and msg.file.name and msg.file.name.lower().endswith('.ipa'):
+                              original_name = msg.file.name
+                              print(f"📥 Found: {original_name} in @{channel}. Downloading...")
+                              downloaded_file = await client.download_media(msg, file=original_name)
+                              break # الخروج من حلقة الرسائل
+                      
+                      if downloaded_file:
+                          print(f"✅ Successfully downloaded from @{channel}!")
+                          break # الخروج من حلقة القنوات لأنه لقى الملف
+                      else:
+                          print(f"⚠️ No IPA found in @{channel}. Moving to next channel...")
+                          
+                  except Exception as e:
+                      print(f"⚠️ Failed to access @{channel} (Maybe banned or private). Error: {e}")
+                      print("🔄 Trying the next channel in list...")
               
               await client.disconnect()
               
@@ -74,7 +89,7 @@ jobs:
                   if version_match:
                       extracted_version = version_match.group(1)
                   else:
-                      extracted_version = "1.0" # إصدار افتراضي لو ما لقى أرقام في الاسم
+                      extracted_version = "1.0" # إصدار افتراضي
                   
                   # 2. تغيير اسم الملف ليكون نظيف: (مثلاً Minecraft_1.26.44.ipa)
                   clean_app_name = re.sub(r'[^A-Za-z0-9]', '', app_name_input)
@@ -92,7 +107,7 @@ jobs:
                       f.write(f"APP_VERSION={extracted_version}\n")
                       f.write(f"UPLOAD_DATE={upload_date_str}\n")
               else:
-                  print("❌ No IPA found.")
+                  print("❌ Critical Error: No IPA found in ANY of the provided channels.")
                   exit(1)
 
           asyncio.run(main())
@@ -130,5 +145,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add repo.json
-          git commit -m "🚀 Auto-Updated $APP_NAME v$APP_VERSION (Hosted on R2)"
+          git commit -m "🚀 Auto-Updated $APP_NAME v$APP_VERSION (Hosted on R2)" || echo "No changes to commit"
+          
+          # تحديث المستودع قبل الرفع لتجنب التعارض (git push rejected)
+          git pull --rebase origin main
           git push
