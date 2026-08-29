@@ -1,4 +1,4 @@
-name: Update ALL Apps
+name: Update ALL App
 
 on:
   schedule:
