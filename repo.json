@@ -267,10 +267,10 @@
       "category": "utilities",
       "versions": [
         {
-          "version": "Nightly-2026.08.29",
-          "date": "2026-08-29T23:34:08Z",
+          "version": "Nightly-2026.08.30",
+          "date": "2026-08-30T14:53:25Z",
           "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/LiveContainer.ipa",
-          "size": 4740731
+          "size": 4740733
         }
       ],
       "appPermissions": {
