@@ -92,7 +92,7 @@
     {
       "name": "PPSSPP",
       "bundleIdentifier": "org.ppsspp.ppsspp",
-      "developerName": "Henrik Rydg�rd",
+      "developerName": "Henrik Rydg\ufffdrd",
       "localizedDescription": "PSP emulator for iOS.",
       "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/PPSPP-icon.png",
       "tintColor": "#224A8B",
@@ -510,20 +510,20 @@
       ]
     },
     {
-      "name": "YTPlus/YTLite Cracked (5.2.2) - v21.35.3",
-      "bundleIdentifier": "com.google.ios.youtube.ytplus.cracked.5.2.2.21.35.3",
+      "name": "YTPlus/YTLite Cracked + Bonus Tweaks (5.2.2 - Mark02-2012)",
+      "bundleIdentifier": "com.google.ios.youtube.ytplus.cracked.bonus.mark02-2012.5.2.2",
       "developerName": "YouTube",
       "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-      "subtitle": "Cracked by Zarzel (shinewake), updated by BallerMC to 21.35.3",
-      "localizedDescription": "This is the cracked version of YTPlus, without the Patreon DRM. This was cracked by Zarzel (shinewake), and updated to 21.35.3.",
+      "subtitle": "Cracked by Zarzel (shinewake), Bonus Tweaks added by Mark02-2012",
+      "localizedDescription": "This is the cracked version of YTPlus, without the Patreon DRM. This was cracked by Zarzel (shinewake).\nThis includes the following tweaks:\nYTLite, YouPiP, YTUHD, YouQuality, RYD, YTABConfig, and DontEatMyContent.",
       "tintColor": "#848ef9",
       "versions": [
         {
           "version": "21.35.3",
-          "date": "2026-08-29T00:00:00Z",
+          "date": "2026-08-30T00:00:00Z",
           "localizedDescription": "This uses 21.35.3 version of YouTube.",
-          "downloadURL": "https://repo.ballermc.com/tubevault/YouTube_v21.35.3_YTPlus_v5.2.2_cracked%5Btg%40tubevault%5D.ipa",
-          "size": 144167213
+          "downloadURL": "https://repo.ballermc.com/tubevault/YTPlus_21.35.3_5.2.2.ipa",
+          "size": 135753341
         }
       ],
       "category": "entertainment"
