@@ -92,7 +92,7 @@
     {
       "name": "PPSSPP",
       "bundleIdentifier": "org.ppsspp.ppsspp",
-      "developerName": "Henrik Rydg�rd",
+      "developerName": "Henrik Rydg\ufffdrd",
       "localizedDescription": "PSP emulator for iOS.",
       "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/PPSPP-icon.png",
       "tintColor": "#224A8B",
@@ -510,20 +510,20 @@
       ]
     },
     {
-      "name": "YTKACE (0.9.1)",
-      "bundleIdentifier": "com.google.ios.youtube.ytkace.0.9.1",
+      "name": "YTPlus/YTLite Cracked (5.2.2) - v21.35.3",
+      "bundleIdentifier": "com.google.ios.youtube.ytplus.cracked.5.2.2.21.35.3",
       "developerName": "YouTube",
       "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-      "subtitle": "Mod by Itzzace0 (Epic0001)",
-      "localizedDescription": "This is a modded version of YouTube.\nSource Code: https://github.com/itzzace/YTKACE",
+      "subtitle": "Cracked by Zarzel (shinewake), updated by BallerMC to 21.35.3",
+      "localizedDescription": "This is the cracked version of YTPlus, without the Patreon DRM. This was cracked by Zarzel (shinewake), and updated to 21.35.3.",
       "tintColor": "#848ef9",
       "versions": [
         {
-          "version": "21.34.3",
-          "date": "2026-08-28T00:00:00Z",
-          "localizedDescription": "This uses 21.34.3 version of YouTube.",
-          "downloadURL": "https://repo.ballermc.com/tubevault/YTKACE_0.9.1_YouTube_21.34.3.ipa",
-          "size": 133752298
+          "version": "21.35.3",
+          "date": "2026-08-29T00:00:00Z",
+          "localizedDescription": "This uses 21.35.3 version of YouTube.",
+          "downloadURL": "https://repo.ballermc.com/tubevault/YouTube_v21.35.3_YTPlus_v5.2.2_cracked%5Btg%40tubevault%5D.ipa",
+          "size": 144167213
         }
       ],
       "category": "entertainment"
