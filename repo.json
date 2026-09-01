@@ -92,7 +92,7 @@
     {
       "name": "PPSSPP",
       "bundleIdentifier": "org.ppsspp.ppsspp",
-      "developerName": "Henrik Rydg�rd",
+      "developerName": "Henrik Rydg\ufffdrd",
       "localizedDescription": "PSP emulator for iOS.",
       "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/PPSPP-icon.png",
       "tintColor": "#224A8B",
@@ -510,20 +510,20 @@
       ]
     },
     {
-      "name": "YTPlus/YTLite Cracked + Bonus Tweaks (5.2.2 - Mark02-2012)",
-      "bundleIdentifier": "com.google.ios.youtube.ytplus.cracked.bonus.mark02-2012.5.2.2",
+      "name": "YTKACE (0.9.2)",
+      "bundleIdentifier": "com.google.ios.youtube.ytkace.0.9.2",
       "developerName": "YouTube",
       "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-      "subtitle": "Cracked by Zarzel (shinewake), Bonus Tweaks added by Mark02-2012",
-      "localizedDescription": "This is the cracked version of YTPlus, without the Patreon DRM. This was cracked by Zarzel (shinewake).\nThis includes the following tweaks:\nYTLite, YouPiP, YTUHD, YouQuality, RYD, YTABConfig, and DontEatMyContent.",
+      "subtitle": "Mod by Itzzace0 (Epic0001)",
+      "localizedDescription": "This is a modded version of YouTube.\nSource Code: https://github.com/itzzace/YTKACE",
       "tintColor": "#848ef9",
       "versions": [
         {
           "version": "21.35.3",
-          "date": "2026-08-30T00:00:00Z",
+          "date": "2026-08-31T00:00:00Z",
           "localizedDescription": "This uses 21.35.3 version of YouTube.",
-          "downloadURL": "https://repo.ballermc.com/tubevault/YTPlus_21.35.3_5.2.2.ipa",
-          "size": 135753341
+          "downloadURL": "https://repo.ballermc.com/tubevault/YTKACE_0.9.2_YouTube_21.35.3.ipa",
+          "size": 134278975
         }
       ],
       "category": "entertainment"
@@ -538,11 +538,11 @@
       "tintColor": "#848ef9",
       "versions": [
         {
-          "version": "9.34.4",
-          "date": "2026-08-25T00:00:00Z",
-          "localizedDescription": "This uses 9.34.4 version of YouTube Music.",
-          "downloadURL": "https://repo.ballermc.com/tubevault/YTMUltimate%2B_2.4.1_9.34.4.ipa",
-          "size": 104079012
+          "version": "9.35.2",
+          "date": "2026-08-31T00:00:00Z",
+          "localizedDescription": "This uses 9.35.2 version of YouTube Music.",
+          "downloadURL": "https://repo.ballermc.com/tubevault/YTMUltimate%2B_2.4.1_9.35.2.ipa",
+          "size": 112324917
         }
       ],
       "category": "entertainment"
