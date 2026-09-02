@@ -92,7 +92,7 @@
     {
       "name": "PPSSPP",
       "bundleIdentifier": "org.ppsspp.ppsspp",
-      "developerName": "Henrik Rydg�rd",
+      "developerName": "Henrik Rydg\ufffdrd",
       "localizedDescription": "PSP emulator for iOS.",
       "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/PPSPP-icon.png",
       "tintColor": "#224A8B",
@@ -529,8 +529,8 @@
       "category": "entertainment"
     },
     {
-      "name": "YouTube Music Ultimate+ (2.4.1)",
-      "bundleIdentifier": "com.google.ios.youtube.music.ultimate.plus",
+      "name": "MaxMusic (1.1)",
+      "bundleIdentifier": "com.google.ios.youtube.music.maxmusic",
       "developerName": "YouTube",
       "iconURL": "https://static.vecteezy.com/system/resources/previews/017/395/384/non_2x/youtube-music-icon-free-png.png",
       "subtitle": "Mod by Mark02-2012",
@@ -541,8 +541,8 @@
           "version": "9.35.2",
           "date": "2026-08-31T00:00:00Z",
           "localizedDescription": "This uses 9.35.2 version of YouTube Music.",
-          "downloadURL": "https://repo.ballermc.com/tubevault/YTMUltimate%2B_2.4.1_9.35.2.ipa",
-          "size": 112324917
+          "downloadURL": "https://repo.ballermc.com/tubevault/MaxMusic_2.4.1_9.35.2.ipa",
+          "size": 105888307
         }
       ],
       "category": "entertainment"
