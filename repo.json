@@ -6,14 +6,14 @@
   "news": [],
   "apps": [
     {
-      "name": "Amethyst",
+      "name": "LA PEASEE",
       "bundleIdentifier": "org.angelauramc.amethyst",
       "developerName": "crystall1ne.dev",
       "subtitle": "Bringing Minecraft: Java Edition to mobile devices.",
       "localizedDescription": "Amethyst nightly build auto-updated via GitHub Actions. Includes JIT and memory entitlements.",
       "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/Amethyst-icon.png",
       "tintColor": "#9649B8",
-      "category": "games",
+      "category": "Games",
       "versions": [
         {
           "version": "2026.09.03.1607",
