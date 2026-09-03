@@ -567,53 +567,6 @@
       "category": "entertainment"
     },
     {
-      "name": "StikDebug",
-      "bundleIdentifier": "com.stik.stikdebug",
-      "developerName": "StikDebug",
-      "subtitle": "On-device JIT enabler and device toolbox.",
-      "localizedDescription": "An on-device debugger and developer toolbox for iOS versions 17.4+ powered by idevice.  Note: Requires LocalDevVPN, cannot be natively used inside LiveContainer to enable JIT for the same LiveContainer.",
-      "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
-      "tintColor": "#3B86F7",
-      "size": 11996559,
-      "screenshots": {
-        "iphone": [
-          {
-            "width": 1290,
-            "height": 2796,
-            "imageURL": "https://stikdebug.xyz/assets/source/home.png"
-          },
-          {
-            "width": 1290,
-            "height": 2796,
-            "imageURL": "https://stikdebug.xyz/assets/source/scripts.png"
-          },
-          {
-            "width": 1290,
-            "height": 2796,
-            "imageURL": "https://stikdebug.xyz/assets/source/settings.png"
-          }
-        ]
-      },
-      "appPermissions": {
-        "entitlements": [],
-        "privacy": {
-          "NSLocalNetworkUsageDescription": "StikDebug needs access to devices on your local network so it can connect to the ip of the target device.",
-          "NSLocationAlwaysAndWhenInUseUsageDescription": "StikDebug uses location to stay running in the background and maintain your connection. This can be turned off in settings.",
-          "NSLocationWhenInUseUsageDescription": "StikDebug uses location to stay running in the background and maintain your connection. This can be turned off in settings."
-        }
-      },
-      "versions": [
-        {
-          "version": "3.1.10",
-          "date": "2026-08-27",
-          "localizedDescription": "Full Changelog: https://github.com/StikDebug/StikDebug/compare/3.1.9...3.1.10\n\nFull Changelog: https://github.com/StikDebug/StikDebug/compare/3.1.9...3.1.10",
-          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.1.10/StikDebug-3.1.10.ipa",
-          "size": 12824047,
-          "minOSVersion": "17.4"
-        }
-      ]
-    },
-    {
       "name": "StikPair",
       "bundleIdentifier": "com.stik.StikPair",
       "developerName": "StikDebug",
