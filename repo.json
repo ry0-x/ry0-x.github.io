@@ -170,10 +170,10 @@
       "category": "emulators",
       "versions": [
         {
-          "version": "1.9.2",
-          "date": "2026-09-03T03:15:09Z",
+          "version": "2.0.0",
+          "date": "2026-09-03T16:15:36Z",
           "downloadURL": "https://github.com/ry0-x/ry0_repo/releases/download/nightly/manic.ipa",
-          "size": 227390683
+          "size": 273393210
         }
       ],
       "appPermissions": {
