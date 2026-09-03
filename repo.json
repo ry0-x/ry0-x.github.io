@@ -239,7 +239,7 @@
       "developerName": "(Stable)",
       "localizedDescription": "Stable release: Standalone version of LiveContainer. Run iOS apps without installing them seamlessly.",
       "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/LC-icon.png",
-      "tintColor": "#000000",
+      "tintColor": "#3986FD",
       "category": "utilities",
       "versions": [
         {
@@ -255,7 +255,8 @@
           "com.apple.private.security.no-sandbox",
           "com.apple.private.security.container-required"
         ]
-      }
+      },
+      "subtitle": ""
     },
     {
       "name": "LiveContainer (Nightly)",
