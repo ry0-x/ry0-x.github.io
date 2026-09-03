@@ -19,7 +19,9 @@
           "downloadURL": "https://github.com/herbrine8403/Amethyst-iOS-MyRemastered/releases/download/5.0.0/Air-5.0.0.ipa",
           "size": 193369366
         }
-      ]
+      ],
+      "localizedDescription": "",
+      "tintColor": "#007AFF"
     },
     {
       "name": "LA PEASEE",
