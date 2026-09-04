@@ -465,10 +465,10 @@
       "category": "emulators",
       "versions": [
         {
-          "version": "Nightly-2026.09.03",
-          "date": "2026-09-03T13:19:40Z",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260903/ARMSX2-nightly-20260903-5fd85d7fc9-iOS-arm64.ipa",
-          "size": 26743108
+          "version": "Nightly-2026.09.04",
+          "date": "2026-09-04T13:12:35Z",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260904/ARMSX2-nightly-20260904-aa2a43fffc-iOS-arm64.ipa",
+          "size": 26743091
         }
       ],
       "appPermissions": {
