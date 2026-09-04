@@ -34,10 +34,10 @@
       "category": "Games",
       "versions": [
         {
-          "version": "2026.09.03.1607",
-          "date": "2026-04-02T00:00:00Z",
+          "version": "MeloNX",
+          "date": "2026-09-04T03:14:06Z",
           "downloadURL": "https://github.com/ry0-x/ry0_repo/releases/download/nightly/amethyst.ipa",
-          "size": 150357372
+          "size": 101400
         }
       ],
       "appPermissions": {
