@@ -6,24 +6,6 @@
   "news": [],
   "apps": [
     {
-      "name": "Amethyst-iOS-MyRemastered",
-      "bundleIdentifier": "com.herbrine8403.amethystiosmyremastered",
-      "developerName": "herbrine8403",
-      "subtitle": "5.0.0",
-      "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/default.png",
-      "category": "Sideloading",
-      "versions": [
-        {
-          "version": "2026.09.04.1606",
-          "date": "2026-08-24",
-          "downloadURL": "https://github.com/herbrine8403/Amethyst-iOS-MyRemastered/releases/download/5.0.0/Air-5.0.0.ipa",
-          "size": 193369366
-        }
-      ],
-      "localizedDescription": "",
-      "tintColor": "#007AFF"
-    },
-    {
       "name": "LA PEASEE",
       "bundleIdentifier": "org.angelauramc.amethyst",
       "developerName": "crystall1ne.dev",
