@@ -33,10 +33,10 @@
       "category": "Games",
       "versions": [
         {
-          "version": "MeloNX",
-          "date": "2026-09-04T16:16:18Z",
-          "downloadURL": "https://github.com/ry0-x/ry0_repo/releases/download/nightly/amethyst.ipa",
-          "size": 101400
+          "version": "2026.09.04.1606",
+          "date": "2026-09-04T16:06:14Z",
+          "downloadURL": "https://github.com/ry0-x/ry0-x.github.io/releases/download/nightly/amethyst.ipa",
+          "size": 191971554
         }
       ],
       "appPermissions": {
@@ -66,10 +66,10 @@
       "category": "emulators",
       "versions": [
         {
-          "version": "MeloNX",
-          "date": "2026-09-03T16:17:34Z",
-          "downloadURL": "https://github.com/ry0-x/ry0_repo/releases/download/nightly/melonx.ipa",
-          "size": 101400
+          "version": "2.6",
+          "date": "2026-08-26T14:52:25Z",
+          "downloadURL": "https://git.ryujinx.app/projects/MeloNX/releases/download/2.6/MeloNX.ipa",
+          "size": 48811519
         }
       ],
       "appPermissions": {
@@ -109,7 +109,7 @@
     {
       "name": "PPSSPP",
       "bundleIdentifier": "org.ppsspp.ppsspp",
-      "developerName": "Henrik Rydg\ufffdrd",
+      "developerName": "Henrik Rydg�rd",
       "localizedDescription": "PSP emulator for iOS.",
       "iconURL": "https://raw.githubusercontent.com/ry0-x/ry0-x.github.io/main/icons/PPSPP-icon.png",
       "tintColor": "#224A8B",
