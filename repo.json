@@ -15,7 +15,7 @@
       "category": "EMU",
       "versions": [
         {
-          "version": "2026.09.05.0305",
+          "version": "1.0.1_release",
           "date": "2026-08-30",
           "downloadURL": "https://github.com/Leviidev/AetherPS4/releases/download/v1.0.1_release/AetherPS4-iOS.ipa",
           "size": 33931355
@@ -32,10 +32,10 @@
       "category": "EMU",
       "versions": [
         {
-          "version": "MeloNX",
-          "date": "2026-09-05T03:15:09Z",
+          "version": "5.0.0",
+          "date": "2026-08-24T03:05:18Z",
           "downloadURL": "https://github.com/herbrine8403/Amethyst-iOS-MyRemastered/releases/download/5.0.0/Air-5.0.0.ipa",
-          "size": 101400
+          "size": 193369366
         }
       ]
     },
@@ -50,8 +50,8 @@
       "category": "Games",
       "versions": [
         {
-          "version": "2026.09.04.1606",
-          "date": "2026-09-04T16:06:14Z",
+          "version": "2026.09.05.0305",
+          "date": "2026-09-05T03:05:04Z",
           "downloadURL": "https://github.com/ry0-x/ry0-x.github.io/releases/download/nightly/amethyst.ipa",
           "size": 191971554
         }

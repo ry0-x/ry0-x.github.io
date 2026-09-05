@@ -18,12 +18,17 @@ jobs:
 
       - name: Download Latest MeloNX
         run: |
+          set -euo pipefail
           mkdir -p apps/emulators
-          
-          LATEST_ID=$(curl -s "https://git.ryujinx.app/melonx/emu/-/releases" | grep -oP 'package_files/\K[0-9]+' | sort -rn | head -n 1 || true)
-          if [ -z "$LATEST_ID" ]; then LATEST_ID="1824"; fi
-          
-          curl -L "https://git.ryujinx.app/melonx/emu/-/package_files/$LATEST_ID/download" -o apps/emulators/melonx.ipa
+
+          LATEST_ID=$(curl --fail --silent --show-error --location "https://git.ryujinx.app/melonx/emu/-/releases" | grep -oP 'package_files/\K[0-9]+' | sort -rn | head -n 1 || true)
+          if [ -z "$LATEST_ID" ]; then
+            echo "Could not identify the latest MeloNX package. Refusing to publish a fallback build."
+            exit 1
+          fi
+
+          curl --fail --location "https://git.ryujinx.app/melonx/emu/-/package_files/$LATEST_ID/download" -o apps/emulators/melonx.ipa
+          unzip -t apps/emulators/melonx.ipa >/dev/null
 
       - name: Upload to Nightly Release
         env:
@@ -32,32 +37,37 @@ jobs:
           gh release create nightly --title "Nightly Builds" --notes "Auto-updated nightly builds" || echo "Release exists"
           gh release upload nightly apps/emulators/melonx.ipa --clobber
 
-      - name: Update JSON Data with Real Version
+      - name: Update MeloNX metadata by bundle identifier
+        env:
+          TARGET_BUNDLE_IDENTIFIER: com.stossy11.MelonNX
+          RELEASE_URL: https://github.com/${{ github.repository }}/releases/download/nightly/melonx.ipa
         run: |
-          # 1. سحب رقم الإصدار من قاعدة البيانات (API) الرسمية للمطور مباشرة!
-          REAL_VERSION=$(curl -s "https://git.ryujinx.app/api/v4/projects/melonx%2Femu/releases" | jq -r '.[0].tag_name' | sed 's/^v//')
-          
-          # 2. إذا الموقع كان عليه ضغط وما رد الـ API، نسحب الرقم من الرابط المباشر
-          if [ "$REAL_VERSION" == "null" ] || [ -z "$REAL_VERSION" ]; then
-            FINAL_URL=$(curl -sLI -o /dev/null -w %{url_effective} "https://git.ryujinx.app/melonx/emu/-/releases/permalink/latest")
-            REAL_VERSION=$(basename "$FINAL_URL" | sed 's/^v//')
+          set -euo pipefail
+          if ! REAL_VERSION="$(curl --fail --silent --show-error --location --retry 3 -H 'Accept: application/json' 'https://git.ryujinx.app/api/v4/projects/melonx%2Femu/releases' | jq -er '.[0].tag_name | strings | sub("^v"; "")')"; then
+            echo "Could not retrieve a verified MeloNX release version; leaving repo.json unchanged." >&2
+            exit 1
           fi
-          
-          # 3. حماية أخيرة: مستحيل يكتب Latest بعد اليوم، بيكتب 2.3.1 كحد أدنى لو خرب سيرفرهم
-          if [ "$REAL_VERSION" == "latest" ] || [ -z "$REAL_VERSION" ]; then 
-            REAL_VERSION="2.3.1"
+          if ! printf '%s' "$REAL_VERSION" | grep -Eq '^[0-9]+([.][0-9A-Za-z][0-9A-Za-z._+-]*)*$'; then
+            echo "Rejected non-version release value: $REAL_VERSION" >&2
+            exit 1
           fi
-          
+
           DATE_NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          FILESIZE=$(stat -c%s "apps/emulators/melonx.ipa" || echo "110000000")
-          
-          # إدخال البيانات في السورس بدقة
-          jq --arg version "$REAL_VERSION" \
+          FILESIZE=$(stat -c%s "apps/emulators/melonx.ipa")
+
+          jq -e --arg bundle_identifier "$TARGET_BUNDLE_IDENTIFIER" \
+             --arg version "$REAL_VERSION" \
              --arg date "$DATE_NOW" \
+             --arg download_url "$RELEASE_URL" \
              --argjson size "$FILESIZE" \
-             '.apps[1].versions[0].version = $version | 
-              .apps[1].versions[0].date = $date | 
-              .apps[1].versions[0].size = $size' repo.json > temp.json && mv temp.json repo.json
+             '([.apps[] | select(.bundleIdentifier == $bundle_identifier)] | length) as $count
+              | if $count == 1 then
+                (.apps[] | select(.bundleIdentifier == $bundle_identifier) | .versions[0]) |=
+                  (.version = $version | .date = $date | .downloadURL = $download_url | .size = $size)
+              else
+                error("Expected exactly one MeloNX record, found \($count)")
+              end' repo.json > temp.json && mv temp.json repo.json
+          echo "REAL_VERSION=$REAL_VERSION" >> "$GITHUB_ENV"
 
       - name: Commit Changes
         run: |

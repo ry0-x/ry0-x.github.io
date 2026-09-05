@@ -35,10 +35,30 @@ jobs:
           gh release create nightly --title "Nightly Builds" --notes "Auto-updated nightly builds" || echo "Release already exists"
           gh release upload nightly amethyst.ipa --clobber
 
-      - name: Safely update JSON version
+      - name: Update Amethyst metadata by bundle identifier
+        env:
+          TARGET_BUNDLE_IDENTIFIER: org.angelauramc.amethyst
+          RELEASE_URL: https://github.com/${{ github.repository }}/releases/download/nightly/amethyst.ipa
         run: |
-          VERSION=$(date +'%Y.%m.%d.%H%M')
-          jq ".apps[0].versions[0].version = \"$VERSION\"" repo.json > temp.json && mv temp.json repo.json
+          set -euo pipefail
+          VERSION=$(date -u +'%Y.%m.%d.%H%M')
+          DATE_NOW=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          FILESIZE=$(stat -c%s amethyst.ipa)
+
+          jq -e --arg bundle_identifier "$TARGET_BUNDLE_IDENTIFIER" \
+             --arg version "$VERSION" \
+             --arg date "$DATE_NOW" \
+             --arg download_url "$RELEASE_URL" \
+             --argjson size "$FILESIZE" '
+            ([.apps[] | select(.bundleIdentifier == $bundle_identifier)] | length) as $count
+            | if $count == 1 then
+              (.apps[] | select(.bundleIdentifier == $bundle_identifier) | .versions[0]) |=
+                (.version = $version | .date = $date | .downloadURL = $download_url | .size = $size)
+            else
+              error("Expected exactly one Amethyst record, found \($count)")
+            end
+          ' repo.json > temp.json && mv temp.json repo.json
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 
       - name: Commit & push JSON
         run: |

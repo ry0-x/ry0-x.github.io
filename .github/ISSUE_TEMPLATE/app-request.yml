@@ -1,0 +1,56 @@
+name: Request an app
+description: Suggest an app for the ryP0 repository.
+title: "App request: "
+labels:
+  - app-request
+body:
+  - type: input
+    id: name
+    attributes:
+      label: App name
+      description: The name that should appear in the repository.
+      placeholder: Example App
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Briefly describe what the app does.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Sideloading
+        - Games
+        - Social
+        - EMU
+        - Movies
+        - Tools
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      description: Use a secure HTTPS repository, IPA, or message link.
+      placeholder: https://example.com/app.ipa
+    validations:
+      required: true
+
+  - type: dropdown
+    id: method
+    attributes:
+      label: Submission method
+      options:
+        - Updatable source
+        - Direct IPA download
+        - Message / Telegram link
+    validations:
+      required: true
